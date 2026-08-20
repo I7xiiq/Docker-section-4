@@ -140,4 +140,4 @@ to build and run:
 
 
 
- install mongoose
+ install mongoose = npm i mongoose
