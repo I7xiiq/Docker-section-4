@@ -141,3 +141,12 @@ to build and run:
 
 
  install mongoose = npm i mongoose
+
+
+
+
+
+
+
+ to see ip address
+  docker inspect containername
