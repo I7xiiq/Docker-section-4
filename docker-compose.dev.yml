@@ -1,0 +1,18 @@
+# Specify the version of docker-compose syntax being used
+version: "3"
+
+# Define the containers (services) that make up your application
+services:
+  
+  # The name of our specific service (used for networking between containers)
+  node-app:
+    build: 
+      context: .
+      target: DEVELOPMENT
+    # Map folders from your host machine to the container (enables Hot Reloading)
+    volumes:
+      # Map the local 'src' folder to the container's '/app/src' folder in Read-Only (ro) mode
+      - ./src:/app/src:ro
+    
+    environment:
+      - NODE_ENV=DEVELOPMENT

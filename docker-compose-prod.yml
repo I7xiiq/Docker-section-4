@@ -1,0 +1,14 @@
+# Specify the version of docker-compose syntax being used
+version: "3"
+
+# Define the containers (services) that make up your application
+services:
+  
+  # The name of our specific service (used for networking between containers)
+  node-app:
+    build: 
+      context: .
+      target: PRODUCTION
+    
+    environment:
+      - NODE_ENV=PRODUCTION
