@@ -159,4 +159,28 @@ to make data base:
  1-docker exec -it docker-section-4-mongo-1 bash
  2- mongosh -u root -p example
  3-use testDB                                      <<     THIS WAY DON't SAVE DB WE MADE
- 4- db.books.insert({title: "book 1"})            
+ 4- db.books.insert({title: "book 1"})      
+
+
+
+
+
+
+to store data:
+   add volume in dockercompose
+
+
+
+
+
+
+
+
+
+ to see volumes:
+  docker volume ls
+
+
+
+to delete volumes:
+  docker volume prune
