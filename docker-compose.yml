@@ -24,6 +24,9 @@ services:
       # The path to the file containing your environment variables
       - ./.env
 
+    depends_on:
+      - mongo
+
   
 
   ## add mongo db image
@@ -47,6 +50,9 @@ services:
       ME_CONFIG_BASICAUTH_ENABLED: true
       ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
       ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
+
+    depends_on:
+      - mongo
   
 
   redis:
