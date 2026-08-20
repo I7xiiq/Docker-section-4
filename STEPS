@@ -193,3 +193,10 @@ how to secc db in ui:
  1- add image mongo-express
  2 run 
  3- search localhost:8081
+
+
+
+
+
+to install redis :
+ npm i redis
