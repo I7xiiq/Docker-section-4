@@ -150,3 +150,13 @@ to build and run:
 
  to see ip address
   docker inspect containername
+
+
+
+
+
+to make data base:
+ 1-docker exec -it docker-section-4-mongo-1 bash
+ 2- mongosh -u root -p example
+ 3-use testDB
+ 4- db.books.insert({title: "book 1"})
