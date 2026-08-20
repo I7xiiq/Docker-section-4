@@ -27,7 +27,6 @@ services:
   
 
   ## add mongo db image
-  services:
   mongo:
     image: mongo
     restart: always
