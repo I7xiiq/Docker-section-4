@@ -184,3 +184,12 @@ to store data:
 
 to delete volumes:
   docker volume prune
+
+
+
+
+
+how to secc db in ui:
+ 1- add image mongo-express
+ 2 run 
+ 3- search localhost:8081
