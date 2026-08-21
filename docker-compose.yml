@@ -29,10 +29,10 @@ services:
       - redis
 
   postgres:
-    image: postgres:16
+    image: postgres
     restart: always
     volumes:
-       - postgres-db:/var/lib/postgresql
+       - postgres-db:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: example
