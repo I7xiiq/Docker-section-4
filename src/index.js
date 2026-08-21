@@ -1,7 +1,7 @@
 const express = require('express');
 // const mongoose = require('mongoose');
 const redis = require('redis');
-
+const { Client } = require('pg');
 
 //init app
 const app = express();
@@ -19,15 +19,15 @@ redisClient.on("connect", () => console.log("connect to redis..."));
 redisClient.connect();
 
 //connect to db
-const DB_USER = 'root';
-const DB_PASSWORD = 'example';
-const DB_PORT = 27017;
-const DB_HOST = 'mongo';
+// const DB_USER = 'root';
+// const DB_PASSWORD = 'example';
+// const DB_PORT = 27017;
+// const DB_HOST = 'mongo';
 
-const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`
-mongoose.connect(URI)
-.then(() => console.log('connect to db..'))
-.catch((err) => console.log('faild connect to db' , err));
+// const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`
+// mongoose.connect(URI)
+// .then(() => console.log('connect to db..'))
+// .catch((err) => console.log('faild connect to db' , err));
 
 app.get('/', (req, res) => { 
     redisClient.set('product' , 'product...');
