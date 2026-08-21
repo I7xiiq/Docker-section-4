@@ -59,5 +59,16 @@ services:
     image: redis 
 
 
+
+  nginx:
+    image: nginx:stable-alpine
+    volumes:
+      - ./templates:/etc/nginx/templates
+    ports:
+      - "8080:80"
+
+
+
+
 volumes:
   mongo-db:
