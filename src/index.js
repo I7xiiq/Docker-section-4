@@ -18,6 +18,34 @@ redisClient.on("error", (err) => console.log("Redis Client Error", err));
 redisClient.on("connect", () => console.log("connect to redis..."));
 redisClient.connect();
 
+
+
+
+
+
+
+//connect to db
+const DB_USER = 'root';
+const DB_PASSWORD = 'example';
+const DB_PORT = 5432;
+const DB_HOST = 'postgres';
+
+const URI = `postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`
+const client = new Client({
+  connectionString: URI ,
+});
+client
+.connect()
+.then(() => console.log('connect to postgres db..'))
+.catch((err) => console.log('faild connect to postgres db' , err));
+
+
+
+
+
+
+
+
 //connect to db
 // const DB_USER = 'root';
 // const DB_PASSWORD = 'example';
