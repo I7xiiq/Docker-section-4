@@ -28,6 +28,14 @@ services:
       - mongo
       - redis
 
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+       - postgres-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
   
 
   ## add mongo db image
@@ -75,3 +83,4 @@ services:
 
 volumes:
   mongo-db:
+  postgres-db:
