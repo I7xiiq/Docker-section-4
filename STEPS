@@ -200,3 +200,10 @@ how to secc db in ui:
 
 to install redis :
  npm i redis
+
+
+
+
+
+to install postgres:
+ npm install pg
